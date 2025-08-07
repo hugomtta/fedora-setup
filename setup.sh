@@ -77,3 +77,7 @@ gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 EOF
 
 sudo dnf install -y code
+
+# Install GitHub CLI
+sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install -y gh
