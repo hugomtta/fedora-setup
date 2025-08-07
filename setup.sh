@@ -12,3 +12,6 @@ if [[ "${ID}" != 'fedora' || "${VARIANT_ID}" != 'workstation' || "${VERSION_ID}"
   echo "This script is intended for Fedora Workstation ${MINIMUM_VERSION} or later."
   exit 1
 fi
+
+# Disable sudo timeout
+echo 'Defaults timestamp_timeout = -1' | sudo tee /etc/sudoers.d/timeout >/dev/null
